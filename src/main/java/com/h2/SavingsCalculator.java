@@ -44,11 +44,11 @@ public class SavingsCalculator {
         String[] deditsAsString = args[1].split( "," );
         float[] credits = new float[creditsAsString.length];
         for (int i = 0; i < creditsAsString.length; i++) {
-            credits[i] = Float.parseFloat( creditsAsString[i] );
+            credits[i] = Utilities.getFloatValue( creditsAsString[i] );
         }
         float[] debits = new float[deditsAsString.length];
         for (int i = 0; i < deditsAsString.length; i++) {
-            debits[i] = Float.parseFloat( deditsAsString[i] );
+            debits[i] = Utilities.getFloatValue( deditsAsString[i] );
         }
 
         SavingsCalculator calculator = new SavingsCalculator( credits, debits );
